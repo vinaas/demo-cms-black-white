@@ -53,15 +53,15 @@ CKEDITOR.plugins.add('customupload', {
               var url = this._.editor.config.downloadUrl + '/' + rec.name
               console.log('this', this, dialog)
               img.setAttribute('src', url)
-              //img.style.height = '200px'
-              //img.style.width = '200px'
+              img.style.height = '200px'
+              img.style.width = '200px'
 
               if (el.$.querySelector('img')) {
                 el.$.replaceChild(img, el.$.querySelector('img'))
               } else {
                 el.$.insertBefore(img, el.$.lastChild);
               }
- 
+
               file.removeAttribute('disabled', 'disabled')
             }).catch(err => alert(err))
           })
